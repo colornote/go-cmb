@@ -3,26 +3,27 @@ package unit_manager
 import (
 	"encoding/json"
 	"errors"
-	"github.com/ahKevinXy/go-cmb/cmb_errors"
-	"github.com/ahKevinXy/go-cmb/constants"
-	"github.com/ahKevinXy/go-cmb/help"
-	"github.com/ahKevinXy/go-cmb/models"
+	"github.com/colornote/go-cmb/cmb_errors"
+	"github.com/colornote/go-cmb/constants"
+	"github.com/colornote/go-cmb/help"
+	"github.com/colornote/go-cmb/models"
 	"strconv"
 	"time"
 )
 
 // GetUnitAccountTransList
-//  @Description: 记账子单元当天交易查询
-//  @param userId
-//  @param asePrivateKey
-//  @param userPrivateKey
-//  @param accnbr
-//  @param dmanbr
-//  @param ctnkey
-//  @return *models.UnitAccountTransDailyResponse
-//  @return error
-//  @Author  ahKevinXy
-//  @Date  2023-04-13 18:49:18
+//
+//	@Description: 记账子单元当天交易查询
+//	@param userId
+//	@param asePrivateKey
+//	@param userPrivateKey
+//	@param accnbr
+//	@param dmanbr
+//	@param ctnkey
+//	@return *models.UnitAccountTransDailyResponse
+//	@return error
+//	@Author  ahKevinXy
+//	@Date  2023-04-13 18:49:18
 func GetUnitAccountTransList(userId, asePrivateKey, userPrivateKey, accnbr, dmanbr, ctnkey string) (*models.UnitAccountTransDailyResponse, error) {
 	reqData := new(models.AccountAddUnitTransDailyRequest)
 	reqData.Request.Head.Reqid = time.Now().Format("20060102150405000") + strconv.Itoa(time.Now().Nanosecond())
@@ -59,19 +60,20 @@ func GetUnitAccountTransList(userId, asePrivateKey, userPrivateKey, accnbr, dman
 }
 
 // GetUnitAccountTransHistoryList
-//  @Description:  获取记账单元历史列表
-//  @param userId
-//  @param asePrivateKey
-//  @param userPrivateKey
-//  @param accnbr
-//  @param dmanbr
-//  @param begdat
-//  @param enddat
-//  @param ctnkey
-//  @return *models.UnitAccountTransHistoryResponse
-//  @return error
-//  @Author  ahKevinXy
-//  @Date  2023-04-13 18:53:33
+//
+//	@Description:  获取记账单元历史列表
+//	@param userId
+//	@param asePrivateKey
+//	@param userPrivateKey
+//	@param accnbr
+//	@param dmanbr
+//	@param begdat
+//	@param enddat
+//	@param ctnkey
+//	@return *models.UnitAccountTransHistoryResponse
+//	@return error
+//	@Author  ahKevinXy
+//	@Date  2023-04-13 18:53:33
 func GetUnitAccountTransHistoryList(userId, asePrivateKey, userPrivateKey, accnbr, dmanbr, begdat, enddat, ctnkey string) (*models.UnitAccountTransHistoryResponse, error) {
 	reqData := new(models.AccountUnitTransHistoryRequest)
 	reqData.Request.Head.Reqid = time.Now().Format("20060102150405000") + strconv.Itoa(time.Now().Nanosecond())

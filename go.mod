@@ -1,4 +1,4 @@
-module github.com/ahKevinXy/go-cmb
+module github.com/colornote/go-cmb
 
 go 1.17
 

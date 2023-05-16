@@ -2,39 +2,40 @@ package account
 
 import (
 	"encoding/json"
-	"github.com/ahKevinXy/go-cmb/cmb_errors"
-	"github.com/ahKevinXy/go-cmb/constants"
-	"github.com/ahKevinXy/go-cmb/help"
-	"github.com/ahKevinXy/go-cmb/models"
+	"github.com/colornote/go-cmb/cmb_errors"
+	"github.com/colornote/go-cmb/constants"
+	"github.com/colornote/go-cmb/help"
+	"github.com/colornote/go-cmb/models"
 	"strconv"
 	"time"
 )
 
 // MainAccountPaySingle
-//  @Description:   单笔对公支付
-//  @param userId
-//  @param asePrivateKey
-//  @param userPrivateKey
-//  @param dbAcc
-//  @param buscode
-//  @param busMode
-//  @param dmaNbr
-//  @param crtAcc
-//  @param crtNam
-//  @param crtBnk
-//  @param crtAdr
-//  @param bnkFlg
-//  @param trsAmt
-//  @param brdNbr
-//  @param nusAge
-//  @param //
-//  @param trsTyp
-//  @param busNar
-//  @param category
-//  @return *models.MainAccountSinglePayResponse
-//  @return error
-//  @Author  ahKevinXy
-//  @Date2023-04-10 13:56:28
+//
+//	@Description:   单笔对公支付
+//	@param userId
+//	@param asePrivateKey
+//	@param userPrivateKey
+//	@param dbAcc
+//	@param buscode
+//	@param busMode
+//	@param dmaNbr
+//	@param crtAcc
+//	@param crtNam
+//	@param crtBnk
+//	@param crtAdr
+//	@param bnkFlg
+//	@param trsAmt
+//	@param brdNbr
+//	@param nusAge
+//	@param //
+//	@param trsTyp
+//	@param busNar
+//	@param category
+//	@return *models.MainAccountSinglePayResponse
+//	@return error
+//	@Author  ahKevinXy
+//	@Date2023-04-10 13:56:28
 func MainAccountPaySingle(userId,
 	asePrivateKey, userPrivateKey,
 	dbAcc,
@@ -102,22 +103,23 @@ func MainAccountPaySingle(userId,
 }
 
 // MainAccountBatchPay
-//  @Description:  批量支付
-//  @param userId
-//  @param asePrivateKey
-//  @param userPrivateKey
-//  @param busCode
-//  @param busMode
-//  @param dtlNbr
-//  @param ctnFlg
-//  @param ctnSts
-//  @param bthNbr
-//  @param payList
-//  @param category
-//  @return *models.MainAccountSinglePayResponse
-//  @return error
-//  @Author  ahKevinXy
-//  @Date2023-04-10 13:57:21
+//
+//	@Description:  批量支付
+//	@param userId
+//	@param asePrivateKey
+//	@param userPrivateKey
+//	@param busCode
+//	@param busMode
+//	@param dtlNbr
+//	@param ctnFlg
+//	@param ctnSts
+//	@param bthNbr
+//	@param payList
+//	@param category
+//	@return *models.MainAccountSinglePayResponse
+//	@return error
+//	@Author  ahKevinXy
+//	@Date2023-04-10 13:57:21
 func MainAccountBatchPay(userId,
 	asePrivateKey, userPrivateKey,
 	busCode,

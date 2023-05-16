@@ -5,7 +5,7 @@ import (
 	"crypto/cipher"
 	"encoding/json"
 	"errors"
-	"github.com/ahKevinXy/go-cmb/config"
+	"github.com/colornote/go-cmb/config"
 	"github.com/tjfoc/gmsm/sm4"
 	"os/exec"
 	"strings"

@@ -16,11 +16,11 @@
 ## 使用
 
 ```bash
-go get -u github.com/ahKevinXy/go-cmb
+go get -u github.com/colornote/go-cmb
 
 #  下载 sm2 
 
-git  clone https://github.com/ahKevinXy/sm2.git 
+git  clone https://github.com/colornote/sm2.git 
 
 cd sm2 
 

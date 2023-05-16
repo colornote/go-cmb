@@ -2,24 +2,25 @@ package payroll
 
 import (
 	"encoding/json"
-	"github.com/ahKevinXy/go-cmb/cmb_errors"
-	"github.com/ahKevinXy/go-cmb/constants"
-	"github.com/ahKevinXy/go-cmb/help"
-	"github.com/ahKevinXy/go-cmb/models"
+	"github.com/colornote/go-cmb/cmb_errors"
+	"github.com/colornote/go-cmb/constants"
+	"github.com/colornote/go-cmb/help"
+	"github.com/colornote/go-cmb/models"
 	"strconv"
 	"time"
 )
 
 // UnitPayrollPayment
-//  @Description:   代发
-//  @param userId
-//  @param asePrivateKey
-//  @param userPrivateKey
-//  @param payMod
-//  @param totalInfo
-//  @param payList
-//  @Author  ahKevinXy
-//  @Date  2023-04-13 19:23:11
+//
+//	@Description:   代发
+//	@param userId
+//	@param asePrivateKey
+//	@param userPrivateKey
+//	@param payMod
+//	@param totalInfo
+//	@param payList
+//	@Author  ahKevinXy
+//	@Date  2023-04-13 19:23:11
 func UnitPayrollPayment(userId, asePrivateKey, userPrivateKey string, payMod []*models.Bb6Busmod, totalInfo []*models.Bb6Aclakx1, payList []*models.Bb6Aclaky1) (*models.UnitPayrollPaymentResponse, error) {
 	reqData := new(models.UnitPayrollPaymentRequest)
 	reqData.Request.Head.Reqid = time.Now().Format("20060102150405000") + strconv.Itoa(time.Now().Nanosecond())

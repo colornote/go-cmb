@@ -1,7 +1,7 @@
 package account
 
 import (
-	"github.com/ahKevinXy/go-cmb/models"
+	"github.com/colornote/go-cmb/models"
 	"reflect"
 	"testing"
 )

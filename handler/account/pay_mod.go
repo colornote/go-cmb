@@ -2,21 +2,22 @@ package account
 
 import (
 	"encoding/json"
-	"github.com/ahKevinXy/go-cmb/constants"
-	"github.com/ahKevinXy/go-cmb/help"
-	"github.com/ahKevinXy/go-cmb/models"
+	"github.com/colornote/go-cmb/constants"
+	"github.com/colornote/go-cmb/help"
+	"github.com/colornote/go-cmb/models"
 	"strconv"
 	"time"
 )
 
 // PayMods
-//  @Description:  获取支付模式
-//  @param userId
-//  @param asePrivateKey
-//  @param userPrivateKey
-//  @param buscode
-//  @Author  ahKevinXy
-//  @Date2023-04-06 19:54:15
+//
+//	@Description:  获取支付模式
+//	@param userId
+//	@param asePrivateKey
+//	@param userPrivateKey
+//	@param buscode
+//	@Author  ahKevinXy
+//	@Date2023-04-06 19:54:15
 func PayMods(userId, asePrivateKey, userPrivateKey, busCode string) (*models.QueryAccountTransCodeResponse, error) {
 
 	reqData := new(models.QueryAccountTransCodeRequest)

@@ -2,30 +2,31 @@ package account
 
 import (
 	"encoding/json"
-	"github.com/ahKevinXy/go-cmb/cmb_errors"
-	"github.com/ahKevinXy/go-cmb/constants"
-	"github.com/ahKevinXy/go-cmb/help"
-	"github.com/ahKevinXy/go-cmb/models"
+	"github.com/colornote/go-cmb/cmb_errors"
+	"github.com/colornote/go-cmb/constants"
+	"github.com/colornote/go-cmb/help"
+	"github.com/colornote/go-cmb/models"
 	"strconv"
 	"time"
 )
 
 // QueryAccountPaymentRefund
-//  @Description:  跨行退票查询
-//  @param userId
-//  @param asePrivateKey
-//  @param userPrivateKey
-//  @param bbkNbr
-//  @param bgnDat
-//  @param endDat
-//  @param reqNbr
-//  @param ctnKey
-//  @param rsv50z
-//  @param
-//  @return *models.QueryAccountPaymentRefundResponse
-//  @return error
-//  @Author  ahKevinXy
-//  @Date2023-04-13 16:59:34
+//
+//	@Description:  跨行退票查询
+//	@param userId
+//	@param asePrivateKey
+//	@param userPrivateKey
+//	@param bbkNbr
+//	@param bgnDat
+//	@param endDat
+//	@param reqNbr
+//	@param ctnKey
+//	@param rsv50z
+//	@param
+//	@return *models.QueryAccountPaymentRefundResponse
+//	@return error
+//	@Author  ahKevinXy
+//	@Date2023-04-13 16:59:34
 func QueryAccountPaymentRefund(
 	userId,
 	asePrivateKey, userPrivateKey,

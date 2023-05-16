@@ -2,10 +2,10 @@ package unit_manager
 
 import (
 	"encoding/json"
-	"github.com/ahKevinXy/go-cmb/cmb_errors"
-	"github.com/ahKevinXy/go-cmb/constants"
-	"github.com/ahKevinXy/go-cmb/help"
-	"github.com/ahKevinXy/go-cmb/models"
+	"github.com/colornote/go-cmb/cmb_errors"
+	"github.com/colornote/go-cmb/constants"
+	"github.com/colornote/go-cmb/help"
+	"github.com/colornote/go-cmb/models"
 	"strconv"
 	"time"
 )
@@ -13,18 +13,19 @@ import (
 // 记账单元 管理
 
 // AddUnitAccount
-//  @Description:  新增记账单元
-//  @param userId
-//  @param asePrivateKey
-//  @param userPrivateKey
-//  @param accnbr
-//  @param dmanam
-//  @param dmanbr
-//  @param
-//  @return *models.AddUnitAccountResponse
-//  @return error
-//  @Author  ahKevinXy
-//  @Date 2023-04-13 17:28:18
+//
+//	@Description:  新增记账单元
+//	@param userId
+//	@param asePrivateKey
+//	@param userPrivateKey
+//	@param accnbr
+//	@param dmanam
+//	@param dmanbr
+//	@param
+//	@return *models.AddUnitAccountResponse
+//	@return error
+//	@Author  ahKevinXy
+//	@Date 2023-04-13 17:28:18
 func AddUnitAccount(
 	userId, asePrivateKey, userPrivateKey, accnbr, dmanam, dmanbr string,
 
@@ -64,17 +65,18 @@ func AddUnitAccount(
 }
 
 // CloseUnitAccount
-//  @Description:  关闭记账单元
-//  @param userId
-//  @param asePrivateKey
-//  @param userPrivateKey
-//  @param accnbr
-//  @param dmanbr
-//  @param
-//  @return *models.CloseUnitAccountResponse
-//  @return error
-//  @Author  ahKevinXy
-//  @Date 2023-04-13 17:46:41
+//
+//	@Description:  关闭记账单元
+//	@param userId
+//	@param asePrivateKey
+//	@param userPrivateKey
+//	@param accnbr
+//	@param dmanbr
+//	@param
+//	@return *models.CloseUnitAccountResponse
+//	@return error
+//	@Author  ahKevinXy
+//	@Date 2023-04-13 17:46:41
 func CloseUnitAccount(
 	userId,
 	asePrivateKey, userPrivateKey,
@@ -117,16 +119,17 @@ func CloseUnitAccount(
 }
 
 // QueryUnitAccountInfo
-//  @Description:  获取账户信息
-//  @param userId
-//  @param asePrivateKey
-//  @param userPrivateKey
-//  @param accnbr
-//  @param dmanbr
-//  @return *models.AccountUnitInfoResponse
-//  @return error
-//  @Author  ahKevinXy
-//  @Date  2023-04-13 17:51:01
+//
+//	@Description:  获取账户信息
+//	@param userId
+//	@param asePrivateKey
+//	@param userPrivateKey
+//	@param accnbr
+//	@param dmanbr
+//	@return *models.AccountUnitInfoResponse
+//	@return error
+//	@Author  ahKevinXy
+//	@Date  2023-04-13 17:51:01
 func QueryUnitAccountInfo(userId, asePrivateKey, userPrivateKey, accnbr, dmanbr string) (*models.AccountUnitInfoResponse, error) {
 	reqData := new(models.AccountUnitInfoRequest)
 	reqData.Request.Head.Reqid = time.Now().Format("20060102150405000") + strconv.Itoa(time.Now().Nanosecond())

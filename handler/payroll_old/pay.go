@@ -2,25 +2,26 @@ package payroll_old
 
 import (
 	"encoding/json"
-	"github.com/ahKevinXy/go-cmb/constants"
-	"github.com/ahKevinXy/go-cmb/help"
-	"github.com/ahKevinXy/go-cmb/models"
+	"github.com/colornote/go-cmb/constants"
+	"github.com/colornote/go-cmb/help"
+	"github.com/colornote/go-cmb/models"
 	"strconv"
 	"time"
 )
 
 // CreditHandleOtherBySup
-//  @Description:  超网代发
-//  @param userId
-//  @param asePrivateKey
-//  @param userPrivateKey
-//  @param busmod 交易模式
-//  @param total
-//  @param detail
-//  @return *models.PayrollOldCreditOtherBySupResponse
-//  @return error
-//  @Author  ahKevinXy
-//  @Date  2023-04-18 09:48:49
+//
+//	@Description:  超网代发
+//	@param userId
+//	@param asePrivateKey
+//	@param userPrivateKey
+//	@param busmod 交易模式
+//	@param total
+//	@param detail
+//	@return *models.PayrollOldCreditOtherBySupResponse
+//	@return error
+//	@Author  ahKevinXy
+//	@Date  2023-04-18 09:48:49
 func CreditHandleOtherBySup(userId, asePrivateKey, userPrivateKey, busmod string, total []*models.Ntagcsaix1, detail []*models.Ntagcsaix2) (*models.PayrollOldCreditOtherBySupResponse, error) {
 
 	reqData := new(models.PayrollOldCreditOtherBySupRequest)

@@ -2,28 +2,29 @@ package account
 
 import (
 	"encoding/json"
-	"github.com/ahKevinXy/go-cmb/cmb_errors"
-	"github.com/ahKevinXy/go-cmb/constants"
-	"github.com/ahKevinXy/go-cmb/help"
-	"github.com/ahKevinXy/go-cmb/models"
+	"github.com/colornote/go-cmb/cmb_errors"
+	"github.com/colornote/go-cmb/constants"
+	"github.com/colornote/go-cmb/help"
+	"github.com/colornote/go-cmb/models"
 	"strconv"
 	"time"
 )
 
 // GetMainAccountTransInfo
-//  @Description:   获取交易信息
-//  @param userId
-//  @param asePrivateKey
-//  @param userPrivateKey
-//  @param bbknbr
-//  @param accnbr
-//  @param trsDat
-//  @param trsseq
-//  @param category
-//  @return *models.GetMainAccountTransInfoResponse
-//  @return error
-//  @Author  ahKevinXy
-//  @Date2023-04-10 14:01:42
+//
+//	@Description:   获取交易信息
+//	@param userId
+//	@param asePrivateKey
+//	@param userPrivateKey
+//	@param bbknbr
+//	@param accnbr
+//	@param trsDat
+//	@param trsseq
+//	@param category
+//	@return *models.GetMainAccountTransInfoResponse
+//	@return error
+//	@Author  ahKevinXy
+//	@Date2023-04-10 14:01:42
 func GetMainAccountTransInfo(userId, asePrivateKey, userPrivateKey,
 	bbknbr,
 	accnbr,
@@ -63,20 +64,21 @@ func GetMainAccountTransInfo(userId, asePrivateKey, userPrivateKey,
 }
 
 // QueryAccountTransInfo
-//  @Description:   获取交易信息
-//  @param userId
-//  @param asePrivateKey
-//  @param userPrivateKey
-//  @param bbknbr
-//  @param accnbr
-//  @param bgndat
-//  @param enddat
-//  @param lowamt
-//  @param hghamt
-//  @return *models.QueryAccountTransInfoResponse
-//  @return error
-//  @Author  ahKevinXy
-//  @Date2023-04-13 15:32:25
+//
+//	@Description:   获取交易信息
+//	@param userId
+//	@param asePrivateKey
+//	@param userPrivateKey
+//	@param bbknbr
+//	@param accnbr
+//	@param bgndat
+//	@param enddat
+//	@param lowamt
+//	@param hghamt
+//	@return *models.QueryAccountTransInfoResponse
+//	@return error
+//	@Author  ahKevinXy
+//	@Date2023-04-13 15:32:25
 func QueryAccountTransInfo(userId, asePrivateKey, userPrivateKey,
 	bbknbr,
 	accnbr,

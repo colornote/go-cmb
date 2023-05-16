@@ -2,7 +2,7 @@ package notice
 
 import (
 	"encoding/json"
-	"github.com/ahKevinXy/go-cmb/models"
+	"github.com/colornote/go-cmb/models"
 )
 
 func Pay(s string) (*models.PayResultNotice, error) {

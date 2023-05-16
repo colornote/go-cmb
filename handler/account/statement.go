@@ -2,10 +2,10 @@ package account
 
 import (
 	"encoding/json"
-	"github.com/ahKevinXy/go-cmb/cmb_errors"
-	"github.com/ahKevinXy/go-cmb/constants"
-	"github.com/ahKevinXy/go-cmb/help"
-	"github.com/ahKevinXy/go-cmb/models"
+	"github.com/colornote/go-cmb/cmb_errors"
+	"github.com/colornote/go-cmb/constants"
+	"github.com/colornote/go-cmb/help"
+	"github.com/colornote/go-cmb/models"
 	"strconv"
 	"time"
 )
@@ -13,20 +13,21 @@ import (
 // 回单
 
 // AsyncStatement
-//  @Description:   异步获取回单
-//  @param userId
-//  @param asePrivateKey
-//  @param userPrivateKey
-//  @param eacnbr
-//  @param begdat
-//  @param enddat
-//  @param begamt
-//  @param endamt
-//  @param category
-//  @return *models.QueryAccountCallbackAsyncResponse
-//  @return error
-//  @Author  ahKevinXy
-//  @Date2023-04-10 15:05:15
+//
+//	@Description:   异步获取回单
+//	@param userId
+//	@param asePrivateKey
+//	@param userPrivateKey
+//	@param eacnbr
+//	@param begdat
+//	@param enddat
+//	@param begamt
+//	@param endamt
+//	@param category
+//	@return *models.QueryAccountCallbackAsyncResponse
+//	@return error
+//	@Author  ahKevinXy
+//	@Date2023-04-10 15:05:15
 func AsyncStatement(userId, asePrivateKey, userPrivateKey,
 	eacnbr,
 	begdat,
@@ -69,18 +70,19 @@ func AsyncStatement(userId, asePrivateKey, userPrivateKey,
 }
 
 // SingleStatementQuery
-//  @Description:  单个回单请求
-//  @param userId
-//  @param asePrivateKey
-//  @param userPrivateKey
-//  @param eacnbr
-//  @param quedat
-//  @param trsseq
-//  @param primod
-//  @return *models.SingleCallBackPdfResponse
-//  @return error
-//  @Author  ahKevinXy
-//  @Date2023-04-10 15:09:21
+//
+//	@Description:  单个回单请求
+//	@param userId
+//	@param asePrivateKey
+//	@param userPrivateKey
+//	@param eacnbr
+//	@param quedat
+//	@param trsseq
+//	@param primod
+//	@return *models.SingleCallBackPdfResponse
+//	@return error
+//	@Author  ahKevinXy
+//	@Date2023-04-10 15:09:21
 func SingleStatementQuery(userId, asePrivateKey, userPrivateKey, eacnbr, quedat, trsseq, primod string) (*models.SingleCallBackPdfResponse, error) {
 	reqData := new(models.SingleCallBackPdfRequest)
 	reqData.Request.Head.Reqid = time.Now().Format("20060102150405000") + strconv.Itoa(time.Now().Nanosecond())
@@ -116,17 +118,18 @@ func SingleStatementQuery(userId, asePrivateKey, userPrivateKey, eacnbr, quedat,
 }
 
 // GetStatementPdf
-//  @Description:   获取回单文件
-//  @param userId
-//  @param asePrivateKey
-//  @param userPrivateKey
-//  @param taskid
-//  @param qwenab
-//  @param category
-//  @return *models.QueryAccountCallbackDownloadPdfResponse
-//  @return error
-//  @Author  ahKevinXy
-//  @Date2023-04-10 15:09:59
+//
+//	@Description:   获取回单文件
+//	@param userId
+//	@param asePrivateKey
+//	@param userPrivateKey
+//	@param taskid
+//	@param qwenab
+//	@param category
+//	@return *models.QueryAccountCallbackDownloadPdfResponse
+//	@return error
+//	@Author  ahKevinXy
+//	@Date2023-04-10 15:09:59
 func GetStatementPdf(userId, asePrivateKey, userPrivateKey, taskid, qwenab string) (*models.QueryAccountCallbackDownloadPdfResponse, error) {
 	reqData := new(models.QueryAccountCallbackDownloadPdfRequest)
 	reqData.Request.Head.Reqid = time.Now().Format("20060102150405000") + strconv.Itoa(time.Now().Nanosecond())
@@ -159,20 +162,21 @@ func GetStatementPdf(userId, asePrivateKey, userPrivateKey, taskid, qwenab strin
 }
 
 // BatchStatementQuery
-//  @Description:  获取回单列表
-//  @param userId
-//  @param asePrivateKey
-//  @param userPrivateKey
-//  @param bbknbr
-//  @param accnbr
-//  @param bgndat
-//  @param enddat
-//  @param lowamt
-//  @param hghamt
-//  @return *models.BatchStatementQueryResponse
-//  @return error
-//  @Author  ahKevinXy
-//  @Date2023-04-13 15:40:33
+//
+//	@Description:  获取回单列表
+//	@param userId
+//	@param asePrivateKey
+//	@param userPrivateKey
+//	@param bbknbr
+//	@param accnbr
+//	@param bgndat
+//	@param enddat
+//	@param lowamt
+//	@param hghamt
+//	@return *models.BatchStatementQueryResponse
+//	@return error
+//	@Author  ahKevinXy
+//	@Date2023-04-13 15:40:33
 func BatchStatementQuery(userId, asePrivateKey, userPrivateKey,
 	bbknbr,
 	accnbr,

@@ -3,10 +3,10 @@ package account
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/ahKevinXy/go-cmb/cmb_errors"
-	"github.com/ahKevinXy/go-cmb/constants"
-	"github.com/ahKevinXy/go-cmb/help"
-	"github.com/ahKevinXy/go-cmb/models"
+	"github.com/colornote/go-cmb/cmb_errors"
+	"github.com/colornote/go-cmb/constants"
+	"github.com/colornote/go-cmb/help"
+	"github.com/colornote/go-cmb/models"
 	"strconv"
 	"time"
 )
@@ -50,18 +50,19 @@ func MainAccountInfo(userId, asePrivateKey, userPrivateKey, accnbr, bbknbr strin
 }
 
 // MainAccountHistoryBalance
-//  @Description:   获取历史余额 todo
-//  @param userId
-//  @param asePrivateKey
-//  @param userPrivateKey
-//  @param accnbr 主账户
-//  @param bbknbr 子单元
-//  @param bgndat 开始时间
-//  @param enddat 结束时间
-//  @param
-//  @return string
-//  @Author  ahKevinXy
-//  @Date2023-04-10 13:48:04
+//
+//	@Description:   获取历史余额 todo
+//	@param userId
+//	@param asePrivateKey
+//	@param userPrivateKey
+//	@param accnbr 主账户
+//	@param bbknbr 子单元
+//	@param bgndat 开始时间
+//	@param enddat 结束时间
+//	@param
+//	@return string
+//	@Author  ahKevinXy
+//	@Date2023-04-10 13:48:04
 func MainAccountHistoryBalance(
 	userId, asePrivateKey,
 	userPrivateKey,
@@ -105,15 +106,16 @@ func MainAccountHistoryBalance(
 }
 
 // GetBankLinkNo
-//  @Description:   获取银联号
-//  @param userId 用户ID
-//  @param asePrivateKey  对称秘钥
-//  @param userPrivateKey  用户私钥
-//  @param accnbr  账号
-//  @return *models.AccountBankInfoResponse 请求返回
-//  @return error
-//  @Author  ahKevinXy
-//  @Date2023-04-10 13:51:13
+//
+//	@Description:   获取银联号
+//	@param userId 用户ID
+//	@param asePrivateKey  对称秘钥
+//	@param userPrivateKey  用户私钥
+//	@param accnbr  账号
+//	@return *models.AccountBankInfoResponse 请求返回
+//	@return error
+//	@Author  ahKevinXy
+//	@Date2023-04-10 13:51:13
 func GetBankLinkNo(userId, asePrivateKey, userPrivateKey, accnbr string) (*models.AccountBankInfoResponse, error) {
 	reqData := new(models.AccountBankInfoRequest)
 	reqData.Request.Head.Reqid = time.Now().Format("20060102150405000") + strconv.Itoa(time.Now().Nanosecond())
@@ -145,16 +147,17 @@ func GetBankLinkNo(userId, asePrivateKey, userPrivateKey, accnbr string) (*model
 }
 
 // GetMainAccountPayBusList
-//  @Description:   获取招商以后支付模式
-//  @param userId
-//  @param asePrivateKey
-//  @param userPrivateKey
-//  @param buscode
-//  @param category
-//  @return *models.QueryAccountTransCodeResponse
-//  @return error
-//  @Author  ahKevinXy
-//  @Date2023-04-10 15:16:34
+//
+//	@Description:   获取招商以后支付模式
+//	@param userId
+//	@param asePrivateKey
+//	@param userPrivateKey
+//	@param buscode
+//	@param category
+//	@return *models.QueryAccountTransCodeResponse
+//	@return error
+//	@Author  ahKevinXy
+//	@Date2023-04-10 15:16:34
 func GetMainAccountPayBusList(userId, asePrivateKey, userPrivateKey, buscode string) (*models.QueryAccountTransCodeResponse, error) {
 	reqData := new(models.QueryAccountTransCodeRequest)
 	reqData.Request.Head.Reqid = time.Now().Format("20060102150405000") + strconv.Itoa(time.Now().Nanosecond())
@@ -186,16 +189,17 @@ func GetMainAccountPayBusList(userId, asePrivateKey, userPrivateKey, buscode str
 }
 
 // QueryBatchAccountBalance
-//  @Description:  批量获取余额
-//  @param userId
-//  @param asePrivateKey
-//  @param userPrivateKey
-//  @param accnbr 账号
-//  @param buscode 分行号
-//  @return *models.QueryBatchAccountBalanceResponse
-//  @return error
-//  @Author  ahKevinXy
-//  @Date2023-04-13 13:58:14
+//
+//	@Description:  批量获取余额
+//	@param userId
+//	@param asePrivateKey
+//	@param userPrivateKey
+//	@param accnbr 账号
+//	@param buscode 分行号
+//	@return *models.QueryBatchAccountBalanceResponse
+//	@return error
+//	@Author  ahKevinXy
+//	@Date2023-04-13 13:58:14
 func QueryBatchAccountBalance(userId, asePrivateKey, userPrivateKey, accnbr, buscode string) (*models.QueryBatchAccountBalanceResponse, error) {
 	reqData := new(models.QueryBatchMainAccountBalanceRequest)
 	reqData.Request.Head.Reqid = time.Now().Format("20060102150405000") + strconv.Itoa(time.Now().Nanosecond())
